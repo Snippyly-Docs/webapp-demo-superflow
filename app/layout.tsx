@@ -7,6 +7,7 @@ import Loader from "@/components/common/Loader";
 
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
+import { initSuperflow } from '@usesuperflow/client'
 
 export default function RootLayout({
   children,
@@ -18,6 +19,7 @@ export default function RootLayout({
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    initSuperflow('nPCc3wQMI57WhwScoLdX', { projectId: '7262707521294444' });
     setTimeout(() => setLoading(false), 1000);
   }, []);
 
